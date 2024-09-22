@@ -38,9 +38,6 @@ bugs = "https://github.com/eniocc/viana_ff/issues"
 changelog = "https://github.com/eniocc/viana_ff/blob/master/changelog.md"
 homepage = "https://github.com/eniocc/viana_ff"
 
-[tool.setuptools]
-package-dir = {"" = "src"}
-
 [tool.setuptools.package-data]
 "*" = ["*.*"]
 
