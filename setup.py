@@ -15,7 +15,7 @@ def _get_version() -> str:
 
 version = _get_version()
 
-readme = Path('README.md').read_text(encoding='utf-8')
+readme = Path('README.rst').read_text(encoding='utf-8')
 
 requirements = []
 
