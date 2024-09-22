@@ -1,4 +1,8 @@
 # .github/workflows/ci-cd.yml
+on:
+    workflow_dispatch:
+    release:
+        types: [ published ]
 jobs:
     pypi-publish:
         name: Upload release to PyPI
