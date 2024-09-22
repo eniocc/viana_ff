@@ -1,15 +1,11 @@
 .. image:: logo/logo_inv.svg
     :alt: viana_ff Logo
     :align: center
-    :width: 500px
-
+    :width: 350px
 
 ========================
 VIANA Forensic Framework
 ========================
-
-
-
 
 .. image:: https://pyup.io/repos/github/eniocc/viana_ff/shield.svg
      :target: https://pyup.io/repos/github/eniocc/viana_ff/
