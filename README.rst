@@ -30,7 +30,7 @@ Features
     - [ ] Subtask 2.2
 
 VIANA Forensic Framework License (VIANA - FFL)
---------
+----------------------------------------------
 *Version 1.0, September 2024*
 
 This software, **VIANA Forensic Framework**, is licensed under the Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0). By using this software, you agree to the following terms:
