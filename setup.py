@@ -43,9 +43,16 @@ setup(
     include_package_data=True,
     keywords='viana_ff',
     name='viana_ff',
-    packages=find_packages(),
+    packages=find_packages('src'),
     test_suite='tests',
     url='https://github.com/eniocc/viana_ff',
     version=_get_version(),  # Versão lida de VERSION.txt
     zip_safe=False,
+    package_data={
+        '': ['version/VERSION.txt'],  # Incluir o VERSION.txt na pasta version
+    },
 )
+
+
+if __name__ == '__main__':
+    _get_version()
