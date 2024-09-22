@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "viana_ff"
 version = "1.0.0"
-requires-python = ">=3.10"
+requires-python = ">=3.10"  # Definido estaticamente
 description = "A comprehensive framework designed for forensic analysis of video, image, and audio data, powered by neural networks. VIANA Forensic Framework provides tools for the automated and assisted identification, authentication, and enhancement of multimedia evidence, leveraging state-of-the-art machine learning techniques. Ideal for professionals working in digital forensics, security, and law enforcement, this framework offers an efficient and scalable solution for analyzing media with precision and accuracy."
 readme = "README.rst"
 authors = [
@@ -15,12 +15,11 @@ maintainers = [
   {name = "Ênio Viana", email = "eniocc@gmail.com"}
 ]
 classifiers = []
-dynamic = ["requires-python", "keywords"]
+dynamic = ["keywords"]  # Apenas "keywords" é dinâmico
 license = {text = "Not open source"}
 dependencies = [
   "typer"
 ]
-
 
 [project.optional-dependencies]
 dev = [
@@ -31,7 +30,6 @@ dev = [
 ]
 
 [project.urls]
-
 bugs = "https://github.com/eniocc/viana_ff/issues"
 changelog = "https://github.com/eniocc/viana_ff/blob/master/changelog.md"
 homepage = "https://github.com/eniocc/viana_ff"
@@ -42,12 +40,8 @@ package-dir = {"" = "src"}
 [tool.setuptools.package-data]
 "*" = ["*.*"]
 
-
-
-
 # Mypy
 # ----
-
 [tool.mypy]
 files = "."
 
@@ -61,4 +55,3 @@ warn_no_return = true
 module = "tests.*"
 allow_untyped_defs = true
 disable_error_code = "attr-defined"
-
