@@ -1,10 +1,11 @@
 [build-system]
-requires = ["setuptools>=61.0"]
+requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "viana_ff"
 version = "1.0.0"
+requires-python = ">=3.10"
 description = "A comprehensive framework designed for forensic analysis of video, image, and audio data, powered by neural networks. VIANA Forensic Framework provides tools for the automated and assisted identification, authentication, and enhancement of multimedia evidence, leveraging state-of-the-art machine learning techniques. Ideal for professionals working in digital forensics, security, and law enforcement, this framework offers an efficient and scalable solution for analyzing media with precision and accuracy."
 readme = "README.rst"
 authors = [
@@ -13,13 +14,16 @@ authors = [
 maintainers = [
   {name = "Ênio Viana", email = "eniocc@gmail.com"}
 ]
-classifiers = [
-
-]
+classifiers = []
+dynamic = ["requires-python", "keywords"]
 license = {text = "Not open source"}
 dependencies = [
   "typer"
 ]
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
 
 [project.optional-dependencies]
 dev = [
