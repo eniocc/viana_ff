@@ -8,7 +8,7 @@ from setuptools import setup
 
 def _get_version() -> str:
     """Read cookiecutter/VERSION.txt and return its contents."""
-    path = Path("cookiecutter").resolve()
+    path = Path("version").resolve()
     version_file = path / "VERSION.txt"
     return version_file.read_text().strip()
 
