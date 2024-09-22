@@ -9,6 +9,14 @@ jobs:
   upload:
     runs-on: ubuntu-latest
 
+    permissions:
+      id-token: write
+      contents: read
+
+    environment:
+      name: pypi.org
+      url: https://pypi.org/project/viana_ff/
+
     steps:
     - uses: actions/checkout@v4
 
