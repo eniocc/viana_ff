@@ -154,7 +154,10 @@ texinfo_documents = [
      'VIANA Forensic Framework Documentation',
      author,
      'viana_ff',
-     'One line description of project.',
+     'VIANA Forensic Framework is a solution for forensic analysis of video, image, and audio data using neural '
+     'networks. It provides tools for identification, authentication, and enhancement of multimedia evidence, '
+     'applying advanced machine learning techniques. Ideal for digital forensics, security, and law enforcement '
+     'professionals..',
      'Miscellaneous'),
 ]
 

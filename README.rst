@@ -39,7 +39,7 @@ This software, **VIANA Forensic Framework**, is licensed under the Creative Comm
 
 3. **No Derivatives for Commercial Use**: Modifications of this software may not be used for commercial purposes, nor may the original or modified software be sold or distributed commercially without explicit permission from the owner.
 
-4. **Contact for Commercial Use**: To seek permission for commercial use, please contact Enio Rodrigues Viana for licensing options and terms.
+4. **Contact for Commercial Use**: To seek permission for commercial use, please contact Ênio Rodrigues Viana for licensing options and terms.
 
 5. **No Warranty**: This software is provided "as-is" without any warranty or liability. The creator is not responsible for any damages or issues arising from the use of this software.
 
