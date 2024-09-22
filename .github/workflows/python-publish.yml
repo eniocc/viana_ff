@@ -37,9 +37,9 @@ jobs:
 
       # Update version in setup.py
       - name: Update version in setup.py
-        run: sed -i "s/{{VERSION_PLACEHOLDER}}/${{ env.TAG_NAME }}/g" setup.py
+        run: sed -i "s/{{VERSION_PLACEHOLDER}}|${{ env.TAG_NAME }}|g" setup.py
 
-      # Build the package
+          # Build the package
       - name: Build distribution
         run: python setup.py sdist bdist_wheel
 
