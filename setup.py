@@ -46,6 +46,6 @@ setup(
     packages=find_packages(),
     test_suite='tests',
     url='https://github.com/eniocc/viana_ff',
-    version=version,  # Versão lida de VERSION.txt
+    version=_get_version(),  # Versão lida de VERSION.txt
     zip_safe=False,
 )
