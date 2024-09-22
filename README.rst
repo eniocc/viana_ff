@@ -1,7 +1,7 @@
 .. image:: logo/logo_inv.svg
-   :alt: viana_ff Logo
-   :align: center
-   :width: 500px
+    :alt: viana_ff Logo
+    :align: center
+    :width: 500px
 
 
 ========================
