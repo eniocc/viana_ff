@@ -1,50 +1,44 @@
-name: Publish Python 🐍 distributions 📦 to PyPI and TestPyPI
+name: Upload to PyPI
 
 on:
-  workflow_dispatch:
   release:
     types: [published]
 
-permissions:
-  contents: read
-
 jobs:
-  deploy:
+  upload:
     runs-on: ubuntu-latest
 
+    environment:
+      name: pypi.org
+      url: https://pypi.org/project/cookiecutter/
+
     steps:
-      # Checkout the repository
-      - name: Checkout code
-        uses: actions/checkout@v3
 
-      # Set up Python environment
-      - name: Set up Python
-        uses: actions/setup-python@v3
-        with:
-          python-version: '3.10'
+    - uses: actions/checkout@v4
 
-      # Install dependencies like setuptools and wheel
-      - name: Install build tools
-        run: |
-          python -m pip install --upgrade pip
-          python -m pip install wheel setuptools
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.10"
 
-      # Extract the tag name from the GitHub context
-      - name: Extract tag name
-        id: tag_name
-        run: |
-          echo "TAG_NAME=$(echo ${GITHUB_REF#refs/tags/})" >> $GITHUB_ENV
+    - name: Install pypa/build
+      run: >-
+        python -m
+        pip install
+        build
+        --user
 
-      # Update version in setup.py
-      - name: Update version in setup.py
-        run: sed -i "s/{{VERSION_PLACEHOLDER}}|${{ env.TAG_NAME }}|g" setup.py
+    - name: Build a binary wheel and a source tarball
+      run: >-
+        python -m
+        build
+        --sdist
+        --wheel
+        --outdir dist/
+        .
 
-          # Build the package
-      - name: Build distribution
-        run: python setup.py sdist bdist_wheel
-
-      # Publish the package to PyPI
-      - name: Publish to PyPI
-        uses: pypa/gh-action-pypi-publish@release/v1
-        with:
-          password: ${{ secrets.PYPI_API_TOKEN }}
+    - name: Publish a Python distribution to PyPI
+      uses: pypa/gh-action-pypi-publish@release/v1
+      with:
+        user: __token__
+        password: ${{ secrets.PYPI_API_TOKEN }}
