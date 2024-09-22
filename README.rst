@@ -1,3 +1,9 @@
+.. image:: logo/logo.svg
+   :alt: viana_ff Logo
+   :align: center
+   :width: 200px
+
+
 ========================
 VIANA Forensic Framework
 ========================
