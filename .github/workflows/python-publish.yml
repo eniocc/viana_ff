@@ -1,6 +1,7 @@
 name: Publish Python Package to PyPI
 
 on:
+  workflow_dispatch:
   push:
     tags:
       - "v*.*.*"  # Dispara o workflow quando uma nova tag de versão for criada
