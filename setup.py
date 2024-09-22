@@ -6,8 +6,8 @@ from setuptools import setup
 
 
 def _get_version() -> str:
-    """Read cookiecutter/VERSION.txt and return its contents."""
-    path = Path("cookiecutter").resolve()  # Atualize se o caminho for diferente
+    """Read version/VERSION.txt and return its contents."""
+    path = Path("version").resolve()  # Atualize se o caminho for diferente
     version_file = path / "VERSION.txt"
     return version_file.read_text().strip()
 
