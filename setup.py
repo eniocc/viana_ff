@@ -1,14 +1,14 @@
 #!/usr/bin/env python
 
 """The setup script."""
+import pathlib
 from pathlib import Path
+
 from setuptools import setup, find_packages
 
 
-def _get_version() -> str:
-    """Read version/VERSION.txt and return its contents."""
-    path = Path("version").resolve()  # Atualize se o caminho for diferente
-    version_file = path / "VERSION.txt"
+def _get_version():
+    version_file = pathlib.Path(__file__).parent / "version" / "VERSION.txt"
     return version_file.read_text().strip()
 
 
