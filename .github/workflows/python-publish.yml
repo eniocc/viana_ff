@@ -9,14 +9,6 @@ jobs:
   upload:
     runs-on: ubuntu-latest
 
-    permissions:
-      id-token: write  # Necessário para autenticação OpenID Connect
-      contents: read   # Necessário para o checkout
-
-    environment:
-      name: pypi.org
-      url: https://pypi.org/project/viana_ff/
-
     steps:
     - uses: actions/checkout@v4
 
