@@ -2,7 +2,7 @@
 
 """The setup script."""
 from pathlib import Path
-from setuptools import setup
+from setuptools import setup, find_packages
 
 
 def _get_version() -> str:
@@ -43,7 +43,7 @@ setup(
     include_package_data=True,
     keywords='viana_ff',
     name='viana_ff',
-    packages=['viana_ff', 'viana_ff.*'],
+    packages=find_packages(),
     test_suite='tests',
     url='https://github.com/eniocc/viana_ff',
     version=version,  # Versão lida de VERSION.txt
