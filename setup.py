@@ -2,13 +2,12 @@
 
 """The setup script."""
 from pathlib import Path
-
 from setuptools import setup
 
 
 def _get_version() -> str:
     """Read cookiecutter/VERSION.txt and return its contents."""
-    path = Path("version").resolve()
+    path = Path("cookiecutter").resolve()  # Atualize se o caminho for diferente
     version_file = path / "VERSION.txt"
     return version_file.read_text().strip()
 
@@ -17,7 +16,9 @@ version = _get_version()
 
 readme = Path('README.rst').read_text(encoding='utf-8')
 
-requirements = []
+requirements = [
+    'typer',  # Inclua outras dependências, se necessário
+]
 
 setup(
     author="Ênio Viana",
@@ -26,7 +27,6 @@ setup(
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
         'Intended Audience :: Developers',
-        'License :: Creative Commons NonCommercial Attribution License (CC BY-NC 4.0)',
         'Natural Language :: English',
         'Programming Language :: Python :: 3.10',
     ],
@@ -39,13 +39,13 @@ setup(
     install_requires=requirements,
     license="Creative Commons NonCommercial Attribution License (CC BY-NC 4.0)",
     long_description=readme,
-    long_description_content_type='text/markdown',
+    long_description_content_type='text/x-rst',  # Atualizado para o formato correto do README
     include_package_data=True,
     keywords='viana_ff',
     name='viana_ff',
     packages=['viana_ff', 'viana_ff.*'],
     test_suite='tests',
     url='https://github.com/eniocc/viana_ff',
-    version='1.0.0',
+    version=version,  # Versão lida de VERSION.txt
     zip_safe=False,
 )

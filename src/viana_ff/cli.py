@@ -12,9 +12,8 @@ console = Console()
 def main():
     """Console script for viana_ff."""
     console.print("Replace this message by putting your code into "
-               "viana_ff.cli.main")
+                  "viana_ff.cli.main")
     console.print("See Typer documentation at https://typer.tiangolo.com/")
-    
 
 
 if __name__ == "__main__":

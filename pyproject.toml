@@ -19,7 +19,8 @@ maintainers = [
   {name = "Ênio Viana", email = "eniocc@gmail.com"}
 ]
 classifiers = []
-dynamic = ["keywords"]  # Apenas "keywords" é dinâmico
+keywords = ["forensic", "analysis", "machine learning", "neural networks", "multimedia"]
+
 license = {text = "Not open source"}
 dependencies = [
   "typer"
