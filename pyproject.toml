@@ -1,0 +1,63 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "viana_ff"
+version = "0.1.0"
+description = "A comprehensive framework designed for forensic analysis of video, image, and audio data, powered by neural networks. VIANA Forensic Framework provides tools for the automated and assisted identification, authentication, and enhancement of multimedia evidence, leveraging state-of-the-art machine learning techniques. Ideal for professionals working in digital forensics, security, and law enforcement, this framework offers an efficient and scalable solution for analyzing media with precision and accuracy."
+readme = "README.rst"
+authors = [
+  {name = "Ênio Viana", email = "eniocc@gmail.com"}
+]
+maintainers = [
+  {name = "Ênio Viana", email = "eniocc@gmail.com"}
+]
+classifiers = [
+
+]
+license = {text = "Not open source"}
+dependencies = [
+  "typer"
+]
+
+[project.optional-dependencies]
+dev = [
+    "coverage",  # testing
+    "mypy",  # linting
+    "pytest",  # testing
+    "ruff"  # linting
+]
+
+[project.urls]
+
+bugs = "https://github.com/eniocc/viana_ff/issues"
+changelog = "https://github.com/eniocc/viana_ff/blob/master/changelog.md"
+homepage = "https://github.com/eniocc/viana_ff"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.package-data]
+"*" = ["*.*"]
+
+
+
+
+# Mypy
+# ----
+
+[tool.mypy]
+files = "."
+
+# Use strict defaults
+strict = true
+warn_unreachable = true
+warn_no_return = true
+
+[[tool.mypy.overrides]]
+# Don't require test functions to include types
+module = "tests.*"
+allow_untyped_defs = true
+disable_error_code = "attr-defined"
+
